@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use('/products', productroutes);
 
-let port = 1234;
+let port = process.env.PORT || 1234;
 app.listen(port, () => {
-    console.log('Server started on port' + port);
+    console.log('Server started on port: ' + port);
 });
